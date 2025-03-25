@@ -3,33 +3,47 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "dev": "nodemon index.ts"
+  "type": "module",
+  "license": "AGPL-version-3.0",
+  "private": false,
+  "engines": {
+    "node": ">= 14.0.0",
+    "npm": ">= 6.0.0"
   },
+  "homepage": "https://github.com/Nageshwar1997/Test-Backend-New#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Nageshwar1997/Test-Backend-New.git"
   },
+  "bugs": "https://github.com/Nageshwar1997/Test-Backend-New/issues",
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/Nageshwar1997/Test-Backend-New/issues"
+  "author": {
+    "name": "Nageshwar Pawar",
+    "email": "nageshpawarpatil@gmail.com",
+    "url": "https://github.com/nageshwar1997"
   },
-  "homepage": "https://github.com/Nageshwar1997/Test-Backend-New#readme",
+  "contributors": [
+    {
+      "name": "Nageshwar Pawar",
+      "email": "nageshpawar@ctruh.com",
+      "url": "https://github.com/nageshwarp1997"
+    }
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && npx tsc",
+    "dev": "nodemon --exec node --loader ts-node/esm src/index.ts",
+    "start": "npm run build && node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "mongoose": "^8.13.0"
+    "express": "^4.21.2"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.17",
-    "@types/dotenv": "^6.1.1",
     "@types/express": "^5.0.1",
-    "@types/mongoose": "^5.11.96"
+    "@types/node": "^22.13.13",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
   }
 }
